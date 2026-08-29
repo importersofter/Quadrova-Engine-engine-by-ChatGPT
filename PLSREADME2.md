@@ -6,4 +6,4 @@ Every copy or redistributed version of ForgeGL must retain the original copyrigh
 
 Removing this copyright notice from a redistributed copy may violate the license terms and, depending on the circumstances, U\.S\. copyright law\.
 
-this web maker engine updates every 2 weeks 
+this web maker engine updates every 2 weeks bytes: 0.2 MB
