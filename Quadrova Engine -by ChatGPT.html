@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<title>ForgeGL</title>
+<title>Quadrova Engine</title>
 <style>
 :root{
   --bg:#0b0e14;
@@ -1470,10 +1470,10 @@ body.playMode #cameraToolPalette{
 
 <div id="mainMenu">
   <aside id="mainMenuSidebar">
-    <div class="mainLogo">Forge<span>GL</span></div>
+    <div class="mainLogo">Quadrova <span>Engine</span></div>
     <div style="margin:-12px 9px 10px;color:#71829a;font-size:8px;line-height:1.35">
       MIT License<br>
-      Copyright (c) 2026 ForgeGL
+      Copyright (c) 2026 Quadrova Engine
     </div>
     <button class="mainNavBtn active" data-mainpage="projectsMainPage">Projects</button>
     <button class="mainNavBtn" data-mainpage="custom3DMainPage">Custom 3D</button>
@@ -2044,7 +2044,7 @@ body.playMode #cameraToolPalette{
   <div class="box">
     <div class="phone">📱↻</div>
     <h2>Rotate to landscape</h2>
-    <p>ForgeGL is a full editor. Landscape gives the viewport, hierarchy, inspector and console room to breathe.</p>
+    <p>Quadrova Engine is a full editor. Landscape gives the viewport, hierarchy, inspector and console room to breathe.</p>
   </div>
 </div>
 
@@ -4839,7 +4839,7 @@ function buildRuntimeHtmlFromSnapshot(snapshot){
 
     ProjectName:
       snapshot.projectName ||
-      'ForgeGL Game',
+      'Quadrova Engine Game',
 
     BuildVersion:
       String(
@@ -4883,7 +4883,7 @@ function buildRuntimeHtmlFromSnapshot(snapshot){
   const projectName=
     String(
       snapshot.projectName ||
-      'ForgeGL Game'
+      'Quadrova Engine Game'
     );
 
   const safeTitle=
@@ -4998,7 +4998,7 @@ function buildRuntimeHtmlFromSnapshot(snapshot){
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${safeTitle}</title>
 <!--
-Made by ForgeGL
+Made by Quadrova Engine
 Project: ${projectName.replace(/--/g,'- -')}
 Objects: ${objects.length}
 Embedded model assets: 0
@@ -5049,9 +5049,9 @@ function buildLegacyRuntimeHtmlFromSnapshot(snapshot){
   const cam=snapshot.camera || {};
 
   const payload={
-    app:'ForgeGL Runtime',
+    app:'Quadrova Engine Runtime',
     version:2,
-    projectName:snapshot.projectName || 'ForgeGL Game',
+    projectName:snapshot.projectName || 'Quadrova Engine Game',
     backend,
     exportedAt:new Date().toISOString(),
 
@@ -5118,7 +5118,7 @@ function buildLegacyRuntimeHtmlFromSnapshot(snapshot){
 
     ProjectName:
       snapshot.projectName ||
-      'ForgeGL Game',
+      'Quadrova Engine Game',
 
     BuildVersion:
       String(
@@ -6169,7 +6169,7 @@ function resize(){
   const exportName=
     String(
       snapshot.projectName ||
-      'ForgeGL Game'
+      'Quadrova Engine Game'
     );
 
   return `<!doctype html>
@@ -6180,7 +6180,7 @@ function resize(){
 <title>${escapeHtml(exportName)}</title>
 
 <!--
-  Made by ForgeGL
+  Made by Quadrova Engine
   Project: ${escapeHtml(exportName)}
   Objects: ${objects.length}
   Embedded model assets: ${usedAssets.length}
@@ -6385,7 +6385,7 @@ function verifyRuntimeExport(runtime,snapshot){
 
   if(!registrationMatch){
     throw new Error(
-      'ForgeGL project registration JSON was not embedded.'
+      'Quadrova Engine project registration JSON was not embedded.'
     );
   }
 
@@ -6398,7 +6398,7 @@ function verifyRuntimeExport(runtime,snapshot){
       );
   }catch{
     throw new Error(
-      'ForgeGL project registration JSON is invalid.'
+      'Quadrova Engine project registration JSON is invalid.'
     );
   }
 
@@ -8716,7 +8716,7 @@ function canUseRequestedBackend(requested){
   if(webgpuBootFailed){
     alert(
       'WebGPU was requested, but the GPU adapter/backend could not be initialized. ' +
-      'ForgeGL will not open this as a fake WebGPU project.'
+      'Quadrova Engine will not open this as a fake WebGPU project.'
     );
     return false;
   }
@@ -9493,14 +9493,14 @@ function init(){
   resizeRenderer();
 
   log(
-    `ForgeGL renderer initialized: ${rendererBackendLabel()}`,
+    `Quadrova Engine renderer initialized: ${rendererBackendLabel()}`,
     'ok'
   );
 
   if(webgpuBootFailed){
     log(
       'WebGPU was requested but Three.js initialized its WebGL fallback. ' +
-      'ForgeGL will not report that project as WebGPU.',
+      'Quadrova Engine will not report that project as WebGPU.',
       'error'
     );
   }
